@@ -24,20 +24,20 @@ namespace Catalog.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Product>),(int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            var products =await _productRepository.GetProducts();
+            var products = await _productRepository.GetProducts();
             return Ok(products);
         }
 
-        [HttpGet("id:length(24)",Name ="GetProduct")]
+        [HttpGet("{id:length(24)}", Name = "GetProduct")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(Product),(int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> GetProductById(string id)
         {
             var product = await _productRepository.GetProduct(id);
-            if(product == null)
+            if (product == null)
             {
                 _logger.LogError($"Product with id: {id}, not found.");
                 return NotFound();
@@ -51,25 +51,6 @@ namespace Catalog.API.Controllers
         public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategory(string category)
         {
             var products = await _productRepository.GetProductByCategory(category);
-            if (products.Count() == 0)
-            {
-                _logger.LogError($"Products with category: {category}, not found.");
-                return NotFound();
-            }
-            return Ok(products);
-        }
-
-        [Route("[action]/{name}", Name = "GetProductByName")]
-        [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProductByName(string name)
-        {
-            var products = await _productRepository.GetProductByName(name);
-            if (products.Count() == 0)
-            {
-                _logger.LogError($"Products with name: {name}, not found.");
-                return NotFound();
-            }
             return Ok(products);
         }
 
@@ -95,6 +76,5 @@ namespace Catalog.API.Controllers
         {
             return Ok(await _productRepository.DeleteProduct(id));
         }
-
     }
 }
