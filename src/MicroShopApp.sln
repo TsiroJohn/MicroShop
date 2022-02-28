@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{4D09466B-9432-44C9-94BF-47125D30C202}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{312C4DD0-966A-432E-B89B-849DFC67A4B7}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{55FF1A39-BBA3-4E69-ABEA-2BA09C2589D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{F36B131C-8205-4161-BB58-2D4BED5A6759}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{B9595467-1D2D-415F-A21A-59F0626A86DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{55FF1A39-BBA3-4E69-ABEA-2BA09C2589D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55FF1A39-BBA3-4E69-ABEA-2BA09C2589D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55FF1A39-BBA3-4E69-ABEA-2BA09C2589D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9595467-1D2D-415F-A21A-59F0626A86DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9595467-1D2D-415F-A21A-59F0626A86DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9595467-1D2D-415F-A21A-59F0626A86DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9595467-1D2D-415F-A21A-59F0626A86DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2A36D4C3-A00E-4A84-A3FB-DCAA7D6B180A} = {4D09466B-9432-44C9-94BF-47125D30C202}
 		{312C4DD0-966A-432E-B89B-849DFC67A4B7} = {2A36D4C3-A00E-4A84-A3FB-DCAA7D6B180A}
+		{F36B131C-8205-4161-BB58-2D4BED5A6759} = {4D09466B-9432-44C9-94BF-47125D30C202}
+		{B9595467-1D2D-415F-A21A-59F0626A86DA} = {F36B131C-8205-4161-BB58-2D4BED5A6759}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA615BBF-A7D8-47F4-A7BB-EAB429ACBBE9}
