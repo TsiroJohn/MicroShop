@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Order.API": {
+    "Ordering.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
